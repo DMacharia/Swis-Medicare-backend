@@ -1,6 +1,11 @@
 class Api::V1::UsersController < ApplicationController
 # rescue_from ActiveRecord::RecordInvalid, with: :render_unprocessable_entity
 
+    def index
+        users = User.all
+        render json: users, status: :ok
+    end
+
     def create
         @user = User.create(user_params)
         if @user.valid?
