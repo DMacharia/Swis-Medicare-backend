@@ -8,4 +8,9 @@ class Api::V1::AuthController < ApplicationController
             render json: {error: 'Invalid username or password' }, status: :unauthorized
     end
     
+    private
+
+    def login_params
+        params.permit(:username, :password)
+    end
 end
