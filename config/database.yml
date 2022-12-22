@@ -81,6 +81,8 @@ test:
 #
 production:
   <<: *default
-  database: Swis_Medicare_backend_production
-  username: Swis_Medicare_backend
-  password: <%= ENV["SWIS_MEDICARE_BACKEND_DATABASE_PASSWORD"] %>
+    url: <%= ENV['DATABASE_URL'] %>
+
+  # database: Swis_Medicare_backend_production
+  # username: Swis_Medicare_backend
+  # password: <%= ENV["SWIS_MEDICARE_BACKEND_DATABASE_PASSWORD"] %>
