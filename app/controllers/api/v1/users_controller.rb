@@ -21,12 +21,14 @@ class Api::V1::UsersController < ApplicationController
           end
     end
 
+    
     private
+
     def user_params
-        params.permit(:username, :password)
+       params.permit(:username, :password,:role)
     end
 
-    # def render_unprocessable_entity
-    #     render json: {error: "failed to create user"}, status: :unprocessable_entity
-    # end
+    # # def render_unprocessable_entity
+    # #     render json: {error: "failed to create user"}, status: :unprocessable_entity
+    # # end
 end
