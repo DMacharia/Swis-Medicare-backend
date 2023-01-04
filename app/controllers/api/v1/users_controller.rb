@@ -1,6 +1,6 @@
 class Api::V1::UsersController < ApplicationController
 # rescue_from ActiveRecord::RecordInvalid, with: :render_unprocessable_entity
-    skip_before_action :authorized, only: [:create]
+    skip_before_action :authorized, only: [:create, :index]
     
     def index
         @users = User.all
@@ -10,6 +10,7 @@ class Api::V1::UsersController < ApplicationController
     def profile
         render json: { user: UserSerializer.new(current_user) }, status: :accepted
     end
+
 
     # def create
     #     @user = User.create(user_params)
