@@ -19,7 +19,7 @@ class MedicalHistorysController < ApplicationController
     private
 
     def medical_history_params
-        params.permit(:patient_id, :condition, :treatment, :notes)
+        params.permit(:patient_id, :weight, :blood_pressure, :blood_sugar, :temperature, :pulse_rate, :test, :diagnosis, :medication, :notes)
     end
 end
 
