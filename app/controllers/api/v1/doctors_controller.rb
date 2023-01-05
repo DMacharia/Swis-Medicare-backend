@@ -16,6 +16,6 @@ class Api::V1::DoctorsController < Api::V1::UsersController
 
     private
     def doctor_params
-       params.permit(:username, :password, :speciality, :role)
+       params.permit(:first_name, :second_name, :username, :email, :reg_no, :mobile_no, :emergency_no, :address, :password, :speciality, :role)
     end
 end

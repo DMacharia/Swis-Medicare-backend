@@ -16,6 +16,6 @@ class Api::V1::AdminsController < Api::V1::UsersController
 
     private
     def admin_params
-       params.permit(:username, :password, :title, :role)
+       params.permit(:first_name, :second_name, :username, :email, :password, :title, :role)
     end
 end

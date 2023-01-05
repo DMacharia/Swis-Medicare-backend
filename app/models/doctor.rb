@@ -1,3 +1,3 @@
 class Doctor < User
-   validates :speciality, presence: true
+   validates :reg_no, :emergency_no, :speciality, presence: true
 end
