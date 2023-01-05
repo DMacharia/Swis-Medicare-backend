@@ -1,10 +1,10 @@
 class Api::V1::UsersController < ApplicationController
 # rescue_from ActiveRecord::RecordInvalid, with: :render_unprocessable_entity
-    skip_before_action :authorized, only: [:create]
+    skip_before_action :authorized, only: [:create, :index]
     
     def index
-        users = User.all
-        render json: users, status: :ok
+        @users = User.all
+        render json: @users, status: :ok
     end
 
     def profile
@@ -24,11 +24,12 @@ class Api::V1::UsersController < ApplicationController
     
     private
 
-    def user_params
-       params.permit(:username, :password,:role)
-    end
+    # def user_params
+    #    params.permit(:username, :password,:role)
+    # end
 
     # # def render_unprocessable_entity
     # #     render json: {error: "failed to create user"}, status: :unprocessable_entity
     # # end
+
 end
