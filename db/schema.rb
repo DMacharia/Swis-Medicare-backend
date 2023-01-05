@@ -16,8 +16,14 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_05_091256) do
 
   create_table "medical_historys", force: :cascade do |t|
     t.integer "patient_id"
-    t.string "condition"
-    t.string "treatment"
+    t.integer "weight"
+    t.string "blood_pressure"
+    t.string "blood_sugar"
+    t.integer "temperature"
+    t.integer "pulse_rate"
+    t.string "test"
+    t.text "diagnosis"
+    t.text "medication"
     t.text "notes"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
