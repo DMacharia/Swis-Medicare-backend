@@ -9,11 +9,10 @@ Rails.application.routes.draw do
             resources :admins, only: [:index, :create]
             resources :doctors, only: [:index, :create]
             resources :patients, only: [:index, :create]
+            resources :medical_historys, only: [:index, :create]
+
             post '/login', to: 'auth#create'
             get '/profile', to: 'users#profile'
         end
     end
-
-    resources :medical_historys
-
 end
