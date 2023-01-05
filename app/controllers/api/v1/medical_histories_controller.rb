@@ -1,19 +1,19 @@
-class MedicalHistorysController < ApplicationController
+class MedicalHistoriesController < ApplicationController
    skip_before_action :authorized, only: [:create, :index]
    
     def index
         if params[:patient_id]
             @patient = Patient.find(params[:patient_id])
-            @medical_historys = Patient.medical_historys
+            @medical_histories = Patient.medical_histories
         else
-            @medical_historys = MedicalHistory.all
-            render json: @medical_historys
+            @medical_histories = MedicalHistory.all
+            render json: @medical_histories
         end
     end
 
     def create
-        @medical_historys = MedicalHistory.create(medical_history_params)
-        render json: @medical_historys, status: :created
+        @medical_histories = MedicalHistory.create(medical_history_params)
+        render json: @medical_histories, status: :created
     end
 
     private

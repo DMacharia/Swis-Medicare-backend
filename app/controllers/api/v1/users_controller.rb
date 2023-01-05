@@ -22,7 +22,7 @@ class Api::V1::UsersController < ApplicationController
     # end
 
     
-    private
+    # private
 
     # def user_params
     #    params.permit(:username, :password,:role)

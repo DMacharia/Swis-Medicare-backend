@@ -14,7 +14,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_05_091256) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "medical_historys", force: :cascade do |t|
+  create_table "medical_histories", force: :cascade do |t|
     t.integer "patient_id"
     t.integer "weight"
     t.string "blood_pressure"
