@@ -10,4 +10,16 @@ class MedicalHistorysController < ApplicationController
             render json: @medical_historys
         end
     end
+
+    def create
+        @medical_historys = MedicalHistory.create(medical_history_params)
+        render json: @medical_historys, status: :created
+    end
+
+    private
+
+    def medical_history_params
+        params.permit(:patient_id, :condition, :treatment, :notes)
+    end
 end
+
