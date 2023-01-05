@@ -1,6 +1,6 @@
 class Api::V1::UsersController < ApplicationController
 # rescue_from ActiveRecord::RecordInvalid, with: :render_unprocessable_entity
-    skip_before_action :authorized, only: [:create, :index]
+    skip_before_action :authorized, only: [:create]
     
     def index
         @users = User.all
