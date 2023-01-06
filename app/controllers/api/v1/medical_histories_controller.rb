@@ -1,5 +1,5 @@
 class MedicalHistoriesController < ApplicationController
-   skip_before_action :authorized, only: [:create, :index]
+    skip_before_action :authorized, only: [:create, :index]
    
     def index
         if params[:patient_id]
@@ -22,4 +22,3 @@ class MedicalHistoriesController < ApplicationController
         params.permit(:patient_id, :weight, :blood_pressure, :blood_sugar, :temperature, :pulse_rate, :test, :diagnosis, :medication, :notes)
     end
 end
-
