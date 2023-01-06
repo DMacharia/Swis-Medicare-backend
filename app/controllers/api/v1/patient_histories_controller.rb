@@ -1,4 +1,4 @@
-class PatientHistoriesController < ApplicationController
+class Api::V1::PatientHistoriesController < ApplicationController
     skip_before_action :authorized, only: [:create, :index]
    
     def index
