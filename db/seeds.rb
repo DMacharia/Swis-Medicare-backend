@@ -16,27 +16,27 @@ puts("🌱seeding Users...")
 puts("")
 puts("")
 
-# puts("🌱Seed admin...")
-# # first_name, :second_name, :username, :email, :password, :title, :role
-# admin = Admin.create!(first_name: 'Peter', second_name: 'Parker', email: 'peter@example.com', username: 'peterparker', password: 'password', title: 'Manager', address: '321 Main St')
+puts("🌱Seed admin...")
+# first_name, :second_name, :username, :email, :password, :title, :role
+admin = Admin.create!(first_name: 'Peter', second_name: 'Parker', email: 'peter@example.com', username: 'peterparker', password: 'password', title: 'Manager', address: '321 Main St')
 
-# puts("🌱Seed doctors...")
-# # first_name, :second_name, :username, :email, :reg_no, :mobile_no, :emergency_no, :address, :password, :speciality
-# doc1 = Doctor.create!(first_name: 'John', second_name: 'Doe', email: 'john@example.com', username: 'johndoe', password: 'password', reg_no: '12345', mobile_no: '12345678', emergency_no: '98765432', address: '123 Main St', speciality: 'Pediatrics')
-# doc2 = Doctor.create!(first_name: 'Alice', second_name: 'Johnson', email: 'alice@example.com', username: 'alicejohnson', password: 'password', reg_no: '45078', mobile_no: '11111111', emergency_no: '55555555', address: '456 Main St', speciality: 'Cardiology')
-# doc3 = Doctor.create!(first_name: 'Michael', second_name: 'Smith', email: 'michael@example.com', username: 'michaelsmith', password: 'password', reg_no: '54321', mobile_no: '22222222', emergency_no: '22222222', address: '789 Main St', speciality: 'Surgery')
-# doc4 = Doctor.create!(first_name: 'Samantha', second_name: 'Williams', email: 'samantha@example.com', username: 'samanthawilliams', password: 'password', reg_no: '98765', mobile_no: '33333333', emergency_no: '33333333', address: '321 Main St', speciality: 'Orthopedics')
-# doc5 = Doctor.create!(first_name: 'David', second_name: 'Johnson', email: 'david@example.com', username: 'davidjohnson', password: 'password', reg_no: '45678', mobile_no: '44444444', emergency_no: '44444444', address: '654 Main St', speciality: 'Ophthalmology')
+puts("🌱Seed doctors...")
+# first_name, :second_name, :username, :email, :reg_no, :mobile_no, :emergency_no, :address, :password, :speciality
+doc1 = Doctor.create!(first_name: 'John', second_name: 'Doe', email: 'john@example.com', username: 'johndoe', password: 'password', reg_no: '12345', mobile_no: '12345678', emergency_no: '98765432', address: '123 Main St', speciality: 'Pediatrics')
+doc2 = Doctor.create!(first_name: 'Alice', second_name: 'Johnson', email: 'alice@example.com', username: 'alicejohnson', password: 'password', reg_no: '45078', mobile_no: '11111111', emergency_no: '55555555', address: '456 Main St', speciality: 'Cardiology')
+doc3 = Doctor.create!(first_name: 'Michael', second_name: 'Smith', email: 'michael@example.com', username: 'michaelsmith', password: 'password', reg_no: '54321', mobile_no: '22222222', emergency_no: '22222222', address: '789 Main St', speciality: 'Surgery')
+doc4 = Doctor.create!(first_name: 'Samantha', second_name: 'Williams', email: 'samantha@example.com', username: 'samanthawilliams', password: 'password', reg_no: '98765', mobile_no: '33333333', emergency_no: '33333333', address: '321 Main St', speciality: 'Orthopedics')
+doc5 = Doctor.create!(first_name: 'David', second_name: 'Johnson', email: 'david@example.com', username: 'davidjohnson', password: 'password', reg_no: '45678', mobile_no: '44444444', emergency_no: '44444444', address: '654 Main St', speciality: 'Ophthalmology')
 
-# puts("🌱Seed patients...")
-# # (:first_name, :second_name, :username, :email, :mobile_no, :gender, :address, :blood_group, :password, :date_of_birth, :role)
-# patient1 = Patient.create!(first_name: 'Bob', second_name: 'Williams', email: 'bob@example.com', username: 'bobwilliams', password: 'password', mobile_no: '123458678', gender: 'Male', address: '123 Main St', blood_group: 'O+', date_of_birth: '01/01/2000')
-# patient2 = Patient.create!(first_name: 'Linda', second_name: 'Williams', email: 'linda@example.com', username: 'lindawilliams', password: 'password', mobile_no: '111111145', gender: 'Female', address: '456 Main St', blood_group: 'A+', date_of_birth: '01/01/1995')
-# patient3 = Patient.create!(first_name: 'William', second_name: 'Davis', email: 'william@example.com', username: 'williamdavis', password: 'password', mobile_no: '222223422', gender: 'Male', address: '789 Main St', blood_group: 'B+', date_of_birth: '01/01/1990')
-# patient4 = Patient.create!(first_name: 'Elizabeth', second_name: 'Smith', email: 'elizabeth@example.com', username: 'elizabethsmith', password: 'password', mobile_no: '555565555', gender: 'Female', address: '246 Main St', blood_group: 'B+', date_of_birth: '01/01/1975')
-# patient5 = Patient.create!(first_name: 'Christopher', second_name: 'Williams', email: 'christopher@example.com', username: 'christopherwilliams', password: 'password', mobile_no: '66666666', gender: 'Male', address: '753 Main St', blood_group: 'O+', date_of_birth: '01/01/1970')
-# # patient6 = Patient.create!(first_name: 'Sarah', second_name: 'Johnson', email: 'sarah@example.com', username: 'sarahjohnson', password: 'password', mobile_no: '77777777', gender: 'Female', address: '369 Main St', blood_group: 'A+', date_of_birth: '01/01/1965')
-# # patient7 = Patient.create!(first_name: 'James', second_name: 'Smith', email: 'james@example.com', username: 'jamessmith', password: 'password', mobile_no: '88888888', gender: 'Male', address: '159 Main St', blood_group: 'B+', date_of_birth: '01/01/1960')
+puts("🌱Seed patients...")
+# (:first_name, :second_name, :username, :email, :mobile_no, :gender, :address, :blood_group, :password, :date_of_birth, :role)
+patient1 = Patient.create!(first_name: 'Bob', second_name: 'Williams', email: 'bob@example.com', username: 'bobwilliams', password: 'password', mobile_no: '123458678', gender: 'Male', address: '123 Main St', blood_group: 'O+', date_of_birth: '01/01/2000')
+patient2 = Patient.create!(first_name: 'Linda', second_name: 'Williams', email: 'linda@example.com', username: 'lindawilliams', password: 'password', mobile_no: '111111145', gender: 'Female', address: '456 Main St', blood_group: 'A+', date_of_birth: '01/01/1995')
+patient3 = Patient.create!(first_name: 'William', second_name: 'Davis', email: 'william@example.com', username: 'williamdavis', password: 'password', mobile_no: '222223422', gender: 'Male', address: '789 Main St', blood_group: 'B+', date_of_birth: '01/01/1990')
+patient4 = Patient.create!(first_name: 'Elizabeth', second_name: 'Smith', email: 'elizabeth@example.com', username: 'elizabethsmith', password: 'password', mobile_no: '555565555', gender: 'Female', address: '246 Main St', blood_group: 'B+', date_of_birth: '01/01/1975')
+patient5 = Patient.create!(first_name: 'Christopher', second_name: 'Williams', email: 'christopher@example.com', username: 'christopherwilliams', password: 'password', mobile_no: '66666666', gender: 'Male', address: '753 Main St', blood_group: 'O+', date_of_birth: '01/01/1970')
+# patient6 = Patient.create!(first_name: 'Sarah', second_name: 'Johnson', email: 'sarah@example.com', username: 'sarahjohnson', password: 'password', mobile_no: '77777777', gender: 'Female', address: '369 Main St', blood_group: 'A+', date_of_birth: '01/01/1965')
+# patient7 = Patient.create!(first_name: 'James', second_name: 'Smith', email: 'james@example.com', username: 'jamessmith', password: 'password', mobile_no: '88888888', gender: 'Male', address: '159 Main St', blood_group: 'B+', date_of_birth: '01/01/1960')
 
 puts("🌱Seed patients medical histories...")
 # Create medical histories for patients
