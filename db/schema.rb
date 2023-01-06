@@ -10,11 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_01_06_124755) do
+ActiveRecord::Schema[7.0].define(version: 2023_01_06_130039) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "medical_histories", force: :cascade do |t|
+  create_table "patient_histories", force: :cascade do |t|
     t.integer "patient_id"
     t.integer "weight"
     t.string "blood_pressure"
