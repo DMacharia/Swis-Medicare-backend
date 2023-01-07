@@ -18,7 +18,7 @@ puts("")
 
 puts("🌱Seed admin...")
 # first_name, :second_name, :username, :email, :password, :title, :role
-admin = Admin.create!(first_name: 'Peter', second_name: 'Parker', email: 'peter@example.com', username: 'peterparker', password: 'password', title: 'Manager', address: '321 Main St')
+admin = Admin.create!(first_name: 'Peter', second_name: 'Parker', email: 'peter@example.com', username: 'peterparker', password: 'password', title: 'Manager', address: '321 Main St', mobile_no:'0711223344')
 
 puts("🌱Seed doctors...")
 # first_name, :second_name, :username, :email, :reg_no, :mobile_no, :emergency_no, :address, :password, :speciality
