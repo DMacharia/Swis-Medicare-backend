@@ -13,6 +13,9 @@ Rails.application.routes.draw do
 
             post '/login', to: 'auth#create'
             get '/profile', to: 'users#profile'
+            get 'doctors/profile', to: 'doctors#profile'
+            get 'admins/profile', to: 'admins#profile'
+            get 'patients/profile', to: 'patients#profile'
         end
     end
 end

@@ -1,5 +1,10 @@
 class Api::V1::PatientHistoriesController < ApplicationController
     skip_before_action :authorized, only: [:create, :index]
+
+    def create
+        @patient_histories = PatientHistory.create(patient_history_params)
+        render json: @patient_histories, status: :created
+    end
    
     def index
         if params[:patient_id]
@@ -10,12 +15,7 @@ class Api::V1::PatientHistoriesController < ApplicationController
             render json: @patient_histories
         end
     end
-
-    def create
-        @patient_histories = PatientHistory.create(patient_history_params)
-        render json: @patient_histories, status: :created
-    end
-
+    
     private
 
     def patient_history_params
