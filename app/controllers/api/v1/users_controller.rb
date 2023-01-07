@@ -1,15 +1,18 @@
 class Api::V1::UsersController < ApplicationController
 # rescue_from ActiveRecord::RecordInvalid, with: :render_unprocessable_entity
-    skip_before_action :authorized, only: [:create, :index]
+rescue_from ActiveRecord::RecordNotFound, with: :render_not_found
+
+   skip_before_action :authorized, only: [:create, :index]
+    
     
     def index
         @users = User.all
         render json: @users, status: :ok
     end
 
-    def profile
-        render json: { user: UserSerializer.new(current_user) }, status: :accepted
-    end
+    # def profile
+    #     render json: { user: UserSerializer.new(current_user) }, status: :accepted
+    # end
 
 
     # def create
@@ -24,6 +27,10 @@ class Api::V1::UsersController < ApplicationController
 
     
     # private
+
+    # def render_not_found
+    #     render json: {message: "{ #{@user.role} not found}" }
+    # end
 
     # def user_params
     #    params.permit(:username, :password,:role)

@@ -14,8 +14,17 @@ class Api::V1::AdminsController < Api::V1::UsersController
         render json: @admins, status: :ok
     end
 
+    def profile
+        render json: { user: AdminSerializer.new(current_user) }, status: :accepted
+    end
+
     private
+
     def admin_params
        params.permit(:first_name, :second_name, :username, :email, :mobile_no, :address, :password, :title, :role)
+    end
+
+    def render_not_found
+        render json: {message: "Admin not found" }, status: :not_found
     end
 end
