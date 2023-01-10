@@ -16,6 +16,7 @@ Rails.application.routes.draw do
             get 'doctors/profile', to: 'doctors#profile'
             get 'admins/profile', to: 'admins#profile'
             get 'patients/profile', to: 'patients#profile'
+            get 'patients/:id', to: 'patients#show'
         end
     end
 end
