@@ -14,6 +14,11 @@ class Api::V1::DoctorsController < Api::V1::UsersController
         render json: @doctors, status: :ok
     end
 
+    def show
+        @doctors = Doctor.find(params[:id])
+        render json: @doctors, serializer: DoctorSerializer, status: :ok
+    end
+
     def profile
         render json: { user: DoctorSerializer.new(current_user) }, status: :accepted
     end
@@ -22,7 +27,7 @@ class Api::V1::DoctorsController < Api::V1::UsersController
       #PATCH   /doctors/:id
     def update
         @doctor = find_doctor
-            @doctor.update(@doctor_params)
+            @doctor.update(doctor_params)
             render json: @doctor, status: :ok
     end
 

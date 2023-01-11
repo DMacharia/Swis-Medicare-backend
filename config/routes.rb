@@ -5,19 +5,19 @@ Rails.application.routes.draw do
   # root "articles#index"
     namespace :api do
         namespace :v1 do
-            resources :users, only: [:index, :create]
-            resources :admins, only: [:index, :create]
-            resources :doctors, only: [:index, :create]
-            resources :patients, only: [:index, :create]
-            resources :patient_histories, only: [:index, :create]
+            resources :users, only: [:index]
+            resources :admins
+            resources :doctors
+            resources :patients
+            resources :patient_histories
             resources :medicines
 
             post '/login', to: 'auth#create'
-            get '/profile', to: 'users#profile'
-            get 'doctors/profile', to: 'doctors#profile'
-            get 'admins/profile', to: 'admins#profile'
-            get 'patients/profile', to: 'patients#profile'
-            get 'patients/:id', to: 'patients#show'
+            # get '/profile', to: 'users#profile'
+            get 'doctor/profile', to: 'doctors#profile'
+            get 'admin/profile', to: 'admins#profile'
+            get 'patient/profile', to: 'patients#profile'
+
         end
     end
 end
