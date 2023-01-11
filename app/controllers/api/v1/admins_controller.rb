@@ -18,6 +18,20 @@ class Api::V1::AdminsController < Api::V1::UsersController
         render json: { user: AdminSerializer.new(current_user) }, status: :accepted
     end
 
+    def update
+        @admin = find_admin
+            @admin.update(@admin_params)
+            render json: @admin, status: :ok
+    end
+
+    #DELETE /@admins/:id
+    def destroy
+        #find & destroy
+        @admin = find_admin
+            @admin.destroy
+            head :no_content
+    end
+
     private
 
     def admin_params
@@ -26,5 +40,9 @@ class Api::V1::AdminsController < Api::V1::UsersController
 
     def render_not_found
         render json: {message: "Admin not found" }, status: :not_found
+    end
+
+    def find_admin
+        Admin.find(params[:id])
     end
 end

@@ -22,6 +22,21 @@ class Api::V1::PatientsController < Api::V1::UsersController
         @patient = Patient.find(params[:id])
         render json: @patient, serializer: PatientHistoryShowSerializer, status: :ok
     end
+
+      #PATCH   /patients/:id
+    def update
+        @patient = find_patient
+            @patient.update(@patient_params)
+            render json: @patient, status: :ok
+    end
+
+    #DELETE /@patients/:id
+    def destroy
+        #find & destroy
+        @patient = find_patient
+            @patient.destroy
+            head :no_content
+    end
     
 
     private
@@ -32,6 +47,10 @@ class Api::V1::PatientsController < Api::V1::UsersController
 
     def render_not_found
         render json: {message: "Patient not found" }, status: :not_found
+    end
+
+    def find_patient
+        Patient.find(params[:id])
     end
 
 end
