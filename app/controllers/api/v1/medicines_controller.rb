@@ -5,7 +5,8 @@ class Api::V1::MedicinesController < ApplicationController
     end
 
     def create
-        @medicine = medicine.create(medicine_params)
+        @medicine = Medicine.create(medicine_params)
+        if @medicine.valid?
         render json: { medicine: MedicineSerializer.new(@medicine) }, status: :created
         else
             render json: { error: 'failed to create medicine' }, status: :unprocessable_entity
@@ -30,12 +31,16 @@ class Api::V1::MedicinesController < ApplicationController
         #find & destroy
         @medicine = find_medicine
             @medicine.destroy
-            head :no_content
+            # head :no_content
+            render json: {message: "medicine deleted successfully"}
+
     end
+
+    private
 
     def medicine_params
         params.permit(:name, :dosage, :manufacturer, :quantity, :expiry_date, :price)
-     end
+    end
  
      def render_not_found
          render json: {message: "medicine not found" }, status: :not_found
