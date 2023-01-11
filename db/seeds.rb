@@ -20,7 +20,7 @@ puts("🌱Seed admin...")
 # first_name, :second_name, :username, :email, :password, :title, :role
 admin = Admin.create!(first_name: 'Peter', second_name: 'Parker', email: 'peter@example.com', username: 'peterparker', password: 'password', title: 'Manager', address: '321 Main St', mobile_no:'0711223344')
 
-puts("🌱Seed doctors...")
+puts("🌱Seed 🧑‍⚕️doctors...")
 # first_name, :second_name, :username, :email, :reg_no, :mobile_no, :emergency_no, :address, :password, :speciality
 doc1 = Doctor.create!(first_name: 'John', second_name: 'Doe', email: 'john@example.com', username: 'johndoe', password: 'password', reg_no: '12345', mobile_no: '12345678', emergency_no: '98765432', address: '123 Main St', speciality: 'Pediatrics')
 doc2 = Doctor.create!(first_name: 'Alice', second_name: 'Johnson', email: 'alice@example.com', username: 'alicejohnson', password: 'password', reg_no: '45078', mobile_no: '11111111', emergency_no: '55555555', address: '456 Main St', speciality: 'Cardiology')
@@ -55,7 +55,19 @@ PatientHistory.create!(patient_id: patient5.id, weight: 160, blood_pressure: '11
 PatientHistory.create!(patient_id: patient5.id, weight: 155, blood_pressure: '110/75', blood_sugar: '100', temperature: 98.5, pulse_rate: 86, test: 'CT scan', diagnosis: 'Pancreatitis', medication: 'Antibiotics', notes: 'Patient has been experiencing abdominal pain and vomiting')
 PatientHistory.create!(patient_id: patient5.id, weight: 150, blood_pressure: '105/70', blood_sugar: '95', temperature: 98.3, pulse_rate: 88, test: 'MRI', diagnosis: 'Herniated disc', medication: 'Muscle relaxants', notes: 'Patient has been experiencing back pain and numbness in limbs')
 
-
+puts("🌱Seed 💊medicines...")
+Medicine.create([
+  { name: "Naproxen", dosage: "500mg", manufacturer: "Aleve", quantity: 50, expiry_date: Date.today + 6.year, price: 11.99 },
+  { name: "Metformin", dosage: "1000mg", manufacturer: "Glucophage", quantity: 100, expiry_date: Date.today + 7.year, price: 15.99 },
+  { name: "Lisinopril", dosage: "20mg", manufacturer: "Prinivil", quantity: 75, expiry_date: Date.today + 8.year, price: 18.99 },
+  { name: "Prednisone", dosage: "10mg", manufacturer: "Deltasone", quantity: 50, expiry_date: Date.today + 9.year, price: 12.99 },
+  { name: "Simvastatin", dosage: "40mg", manufacturer: "Zocor", quantity: 100, expiry_date: Date.today + 10.year, price: 20.99 },
+  { name: "Lipitor", dosage: "20mg", manufacturer: "Atorvastatin", quantity: 75, expiry_date: Date.today + 11.year, price: 25.99 },
+  { name: "Hydroxychloroquine", dosage: "200mg", manufacturer: "Plaquenil", quantity: 50, expiry_date: Date.today + 12.year, price: 30.99 },
+  { name: "Ciprofloxacin", dosage: "500mg", manufacturer: "Cipro", quantity: 100, expiry_date: Date.today + 13.year, price: 35.99 },
+  { name: "Azithromycin", dosage: "250mg", manufacturer: "Zithromax", quantity: 75, expiry_date: Date.today + 14.year, price: 40.99 },
+  { name: "Doxycycline", dosage: "100mg", manufacturer: "Doryx", quantity: 50, expiry_date: Date.today + 15.year, price: 45.99 }
+])
 
 
 puts("....................")

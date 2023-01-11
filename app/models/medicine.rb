@@ -1,0 +1,3 @@
+class Medicine < ApplicationRecord
+    
+end
