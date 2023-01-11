@@ -26,7 +26,7 @@ class Api::V1::PatientsController < Api::V1::UsersController
       #PATCH   /patients/:id
     def update
         @patient = find_patient
-            @patient.update(@patient_params)
+            @patient.update(patient_params)
             render json: @patient, status: :ok
     end
 

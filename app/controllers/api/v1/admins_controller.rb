@@ -14,13 +14,18 @@ class Api::V1::AdminsController < Api::V1::UsersController
         render json: @admins, status: :ok
     end
 
+    def show
+        @admins = find_admin
+        render json: @admins, serializer: AdminSerializer, status: :ok
+    end
+
     def profile
         render json: { user: AdminSerializer.new(current_user) }, status: :accepted
     end
 
     def update
         @admin = find_admin
-            @admin.update(@admin_params)
+            @admin.update(admin_params)
             render json: @admin, status: :ok
     end
 
