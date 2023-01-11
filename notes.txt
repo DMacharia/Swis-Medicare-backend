@@ -1,8 +1,7 @@
                                 Prefix Verb   URI Pattern                                                                                       Controller#Action
-                            api_v1_users GET    /api/v1/users(.:format)                                                                           api/v1/users#index
-                                         POST   /api/v1/users(.:format)                                                                           api/v1/users#create
-                           api_v1_admins GET    /api/v1/admins(.:format)                                                                          api/v1/admins#index
-                                         POST   /api/v1/admins(.:format)                                                                          api/v1/admins#create
+                            api_v1_users GET    /api/v1/users(.:format)                                     tested                                api/v1/users#index
+                           api_v1_admins GET    /api/v1/admins(.:format)                                    tested                                api/v1/admins#index
+                                         POST   /api/v1/admins(.:format)                                    tested                                api/v1/admins#create
                             api_v1_admin GET    /api/v1/admins/:id(.:format)                                                                      api/v1/admins#show
                                          PATCH  /api/v1/admins/:id(.:format)                                                                      api/v1/admins#update
                                          PUT    /api/v1/admins/:id(.:format)                                                                      api/v1/admins#update
