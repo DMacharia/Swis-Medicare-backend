@@ -10,6 +10,7 @@ Rails.application.routes.draw do
             resources :doctors, only: [:index, :create]
             resources :patients, only: [:index, :create]
             resources :patient_histories, only: [:index, :create]
+            resources :medicines
 
             post '/login', to: 'auth#create'
             get '/profile', to: 'users#profile'
