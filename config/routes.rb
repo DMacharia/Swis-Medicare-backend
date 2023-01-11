@@ -12,11 +12,11 @@ Rails.application.routes.draw do
             resources :patient_histories
 
             post '/login', to: 'auth#create'
-            get '/profile', to: 'users#profile'
-            get 'doctors/profile', to: 'doctors#profile'
-            get 'admins/profile', to: 'admins#profile'
-            get 'patients/profile', to: 'patients#profile'
-            get 'patients/:id', to: 'patients#show'
+            # get '/profile', to: 'users#profile'
+            get 'doctor/profile', to: 'doctors#profile'
+            get 'admin/profile', to: 'admins#profile'
+            get 'patient/profile', to: 'patients#profile'
+
         end
     end
 end
