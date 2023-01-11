@@ -54,7 +54,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_11_142242) do
     t.string "password_digest"
     t.string "title"
     t.string "speciality"
-    t.date "date_of_birth"
+    t.string "date_of_birth"
     t.string "role"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
