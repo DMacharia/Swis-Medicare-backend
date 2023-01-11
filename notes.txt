@@ -28,3 +28,9 @@
                   api_v1_doctor_profile GET    /api/v1/doctor/profile(.:format)                             tested&passed                                api/v1/doctors#profile
                    api_v1_admin_profile GET    /api/v1/admin/profile(.:format)                              tested&passed                                api/v1/admins#profile
                  api_v1_patient_profile GET    /api/v1/patient/profile(.:format)                            tested&passed                                api/v1/patients#profile
+                        api_v1_medicines GET    /api/v1/medicines(.:format)                                 tested&passed                                api/v1/medicines#index
+                                         POST   /api/v1/medicines(.:format)                                 tested&passed                                api/v1/medicines#create
+                         api_v1_medicine GET    /api/v1/medicines/:id(.:format)                             tested&passed                                api/v1/medicines#show
+                                         PATCH  /api/v1/medicines/:id(.:format)                             tested&passed                                api/v1/medicines#update
+                                         PUT    /api/v1/medicines/:id(.:format)                             tested&passed                                api/v1/medicines#update
+                                         DELETE /api/v1/medicines/:id(.:format)                             tested&passed                                api/v1/medicines#destroy
