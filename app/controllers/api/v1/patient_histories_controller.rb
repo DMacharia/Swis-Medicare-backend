@@ -16,22 +16,23 @@ class Api::V1::PatientHistoriesController < ApplicationController
         end
     end
 
+    def show
+        @patient_history = PatientHistory.find(params[:id])
+        render json: @patient_history, serializer: PatientHistorySerializer, status: :ok
+    end
+
     def update
-        if params[:patient_id]
-        @patient = Patient.find(params[:patient_id])
-        @patient_histories = Patient.patient_histories
-        @patient_histories.update(params[:patient_history_params])
-        render json: @patient_histories, status: :ok
+        @patient_history= PatientHistory.find(params[:id])
+        @patient_history.update(patient_history_params)
+        render json: @patient_history, status: :ok
     end
 
     #DELETE /@patients/:id
     def destroy
         #find & destroy
-        if params[:patient_id]
-            @patient = Patient.find(params[:patient_id])
-            @patient_histories = Patient.patient_histories
-            @patient_histories.destroy
-            head :no_content
+        @patient_history= PatientHistory.find(params[:id])
+        @patient_history.destroy
+        head :no_content
     end
     
     private

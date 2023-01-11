@@ -1,33 +1,30 @@
                                 Prefix Verb   URI Pattern                                                                                       Controller#Action
-                            api_v1_users GET    /api/v1/users(.:format)                                                                           api/v1/users#index
-                                         POST   /api/v1/users(.:format)                                                                           api/v1/users#create
-                           api_v1_admins GET    /api/v1/admins(.:format)                                                                          api/v1/admins#index
-                                         POST   /api/v1/admins(.:format)                                                                          api/v1/admins#create
-                            api_v1_admin GET    /api/v1/admins/:id(.:format)                                                                      api/v1/admins#show
-                                         PATCH  /api/v1/admins/:id(.:format)                                                                      api/v1/admins#update
-                                         PUT    /api/v1/admins/:id(.:format)                                                                      api/v1/admins#update
-                                         DELETE /api/v1/admins/:id(.:format)                                                                      api/v1/admins#destroy
-                          api_v1_doctors GET    /api/v1/doctors(.:format)                                                                         api/v1/doctors#index
-                                         POST   /api/v1/doctors(.:format)                                                                         api/v1/doctors#create
-                           api_v1_doctor GET    /api/v1/doctors/:id(.:format)                                                                     api/v1/doctors#show
-                                         PATCH  /api/v1/doctors/:id(.:format)                                                                     api/v1/doctors#update
-                                         PUT    /api/v1/doctors/:id(.:format)                                                                     api/v1/doctors#update
-                                         DELETE /api/v1/doctors/:id(.:format)                                                                     api/v1/doctors#destroy
-                         api_v1_patients GET    /api/v1/patients(.:format)                                                                        api/v1/patients#index
-                                         POST   /api/v1/patients(.:format)                                                                        api/v1/patients#create
-                          api_v1_patient GET    /api/v1/patients/:id(.:format)                                                                    api/v1/patients#show
-                                         PATCH  /api/v1/patients/:id(.:format)                                                                    api/v1/patients#update
-                                         PUT    /api/v1/patients/:id(.:format)                                                                    api/v1/patients#update
-                                         DELETE /api/v1/patients/:id(.:format)                                                                    api/v1/patients#destroy
-                api_v1_patient_histories GET    /api/v1/patient_histories(.:format)                                                               api/v1/patient_histories#index
-                                         POST   /api/v1/patient_histories(.:format)                                                               api/v1/patient_histories#create
-                  api_v1_patient_history GET    /api/v1/patient_histories/:id(.:format)                                                           api/v1/patient_histories#show
-                                         PATCH  /api/v1/patient_histories/:id(.:format)                                                           api/v1/patient_histories#update
-                                         PUT    /api/v1/patient_histories/:id(.:format)                                                           api/v1/patient_histories#update
-                                         DELETE /api/v1/patient_histories/:id(.:format)                                                           api/v1/patient_histories#destroy
-                            api_v1_login POST   /api/v1/login(.:format)                                                                           api/v1/auth#create
-                          api_v1_profile GET    /api/v1/profile(.:format)                                                                         api/v1/users#profile
-                  api_v1_doctors_profile GET    /api/v1/doctors/profile(.:format)                                                                 api/v1/doctors#profile
-                   api_v1_admins_profile GET    /api/v1/admins/profile(.:format)                                                                  api/v1/admins#profile
-                 api_v1_patients_profile GET    /api/v1/patients/profile(.:format)                                                                api/v1/patients#profile
-                                  api_v1 GET    /api/v1/patients/:id(.:format)                                                                    api/v1/patients#show
+                            api_v1_users GET    /api/v1/users(.:format)                                     tested&passed                                api/v1/users#index
+                           api_v1_admins GET    /api/v1/admins(.:format)                                    tested&passed                                api/v1/admins#index
+                                         POST   /api/v1/admins(.:format)                                    tested&passed                                api/v1/admins#create
+                            api_v1_admin GET    /api/v1/admins/:id(.:format)                                tested&passed                                api/v1/admins#show
+                                         PATCH  /api/v1/admins/:id(.:format)                                tested&passed                                api/v1/admins#update
+                                         PUT    /api/v1/admins/:id(.:format)                                tested&passed                                api/v1/admins#update
+                                         DELETE /api/v1/admins/:id(.:format)                                tested&passed                                api/v1/admins#destroy
+                          api_v1_doctors GET    /api/v1/doctors(.:format)                                   tested&passed                                api/v1/doctors#index
+                                         POST   /api/v1/doctors(.:format)                                   tested&passed                                api/v1/doctors#create
+                           api_v1_doctor GET    /api/v1/doctors/:id(.:format)                               tested&passed                                api/v1/doctors#show
+                                         PATCH  /api/v1/doctors/:id(.:format)                               tested&passed                                api/v1/doctors#update
+                                         PUT    /api/v1/doctors/:id(.:format)                               tested&passed                                api/v1/doctors#update
+                                         DELETE /api/v1/doctors/:id(.:format)                               tested&passed                                api/v1/doctors#destroy
+                         api_v1_patients GET    /api/v1/patients(.:format)                                  tested&passed                                api/v1/patients#index
+                                         POST   /api/v1/patients(.:format)                                  tested&passed                                api/v1/patients#create
+                          api_v1_patient GET    /api/v1/patients/:id(.:format)                              tested&passed                                api/v1/patients#show
+                                         PATCH  /api/v1/patients/:id(.:format)                              tested&passed                                api/v1/patients#update
+                                         PUT    /api/v1/patients/:id(.:format)                              tested&passed                                api/v1/patients#update
+                                         DELETE /api/v1/patients/:id(.:format)                              tested&passed                                api/v1/patients#destroy
+                api_v1_patient_histories GET    /api/v1/patient_histories(.:format)                         tested&passed                                api/v1/patient_histories#index
+                                         POST   /api/v1/patient_histories(.:format)                         tested&passed                                api/v1/patient_histories#create
+                  api_v1_patient_history GET    /api/v1/patient_histories/:id(.:format)                     tested&passed                                api/v1/patient_histories#show
+                                         PATCH  /api/v1/patient_histories/:id(.:format)                     tested&passed                                api/v1/patient_histories#update
+                                         PUT    /api/v1/patient_histories/:id(.:format)                     tested&passed                                api/v1/patient_histories#update
+                                         DELETE /api/v1/patient_histories/:id(.:format)                     tested&passed                                api/v1/patient_histories#destroy
+                            api_v1_login POST   /api/v1/login(.:format)                                     tested&passed                                api/v1/auth#create
+                  api_v1_doctor_profile GET    /api/v1/doctor/profile(.:format)                             tested&passed                                api/v1/doctors#profile
+                   api_v1_admin_profile GET    /api/v1/admin/profile(.:format)                              tested&passed                                api/v1/admins#profile
+                 api_v1_patient_profile GET    /api/v1/patient/profile(.:format)                            tested&passed                                api/v1/patients#profile
