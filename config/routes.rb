@@ -13,7 +13,7 @@ Rails.application.routes.draw do
             resources :medicines
 
             post '/login', to: 'auth#create'
-            # get '/profile', to: 'users#profile'
+            get '/profile', to: 'users#profile'
             get 'doctor/profile', to: 'doctors#profile'
             get 'admin/profile', to: 'admins#profile'
             get 'patient/profile', to: 'patients#profile'

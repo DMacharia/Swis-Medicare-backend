@@ -10,9 +10,9 @@ rescue_from ActiveRecord::RecordNotFound, with: :render_not_found
         render json: @users, status: :ok
     end
 
-    # def profile
-    #     render json: { user: UserSerializer.new(current_user) }, status: :accepted
-    # end
+    def profile
+        render json: { user: UserSerializer.new(current_user) }, status: :accepted
+    end
 
 
     # def create
