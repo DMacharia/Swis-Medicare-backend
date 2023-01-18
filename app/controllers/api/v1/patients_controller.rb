@@ -20,8 +20,7 @@ class Api::V1::PatientsController < Api::V1::UsersController
 
     def show
         @patient = Patient.find(params[:id])
-        render json: @patient
-        # , serializer: PatientHistoryShowSerializer, status: :ok
+        render json: @patient, serializer: PatientHistoryShowSerializer, status: :ok
     end
 
       #PATCH   /patients/:id
