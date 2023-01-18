@@ -10,15 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_01_16_045621) do
+ActiveRecord::Schema[7.0].define(version: 2023_01_11_142242) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "access_tokens", force: :cascade do |t|
-    t.string "token"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
 
   create_table "medicines", force: :cascade do |t|
     t.string "name"
@@ -27,16 +21,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_16_045621) do
     t.integer "quantity"
     t.date "expiry_date"
     t.decimal "price"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "mpesas", force: :cascade do |t|
-    t.string "phoneNumber"
-    t.string "amount"
-    t.string "checkoutRequestID"
-    t.string "merchantRequestID"
-    t.string "mpesaReceiptNumber"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -70,7 +54,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_16_045621) do
     t.string "password_digest"
     t.string "title"
     t.string "speciality"
-    t.date "date_of_birth"
+    t.string "date_of_birth"
     t.string "role"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
